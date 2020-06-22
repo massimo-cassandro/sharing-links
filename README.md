@@ -2,6 +2,8 @@
 
 A quick and customizable links builder
 
+https://massimo-cassandro.github.io/m-sharing/test
+
 setup
 size: standard (std, small big) custom, via js or data
 css

@@ -19,7 +19,7 @@ export default function (options) {
         name: 'Twitter'
       },
       wa   : {
-        url: 'https://api.whatsapp.com/send?text=[[URL]',
+        url: 'https://api.whatsapp.com/send?text=[[URL]]',
         class: 'wa',
         name: 'Whatsapp'
       }
@@ -76,6 +76,20 @@ export default function (options) {
           <span>${options.title_prefix} ${sharing_data.name}</span>
         </a>`
       );
+
+      el.querySelectorAll('a').forEach(lnk => {
+        lnk.addEventListener('click', function(e) {
+          e.preventDefault();
+          let w =450,
+            h=500,
+            t = window.top.outerHeight / 2 + window.top.screenY - ( h / 2),
+            l = window.top.outerWidth / 2 + window.top.screenX - ( w / 2);
+          window.open(this.href, 'm-sharing',
+            `width=${w},height=${h},top=${t},left=${l}` +
+            ',menubar=no,location=yes,resizable=yes,scrollbars=yes,status=no'
+          );
+        }, false);
+      });
 
     });
 
