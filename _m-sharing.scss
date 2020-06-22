@@ -1,0 +1,113 @@
+@import './imgs/icons';
+
+$m-sharing-items: (
+  fb: (
+    bg: #39579a,
+    fg: #fff,
+    icon: $m-sharing-facebook
+  ),
+  twt: (
+    bg: #1da1f2,
+    fg: #fff,
+    icon: $m-sharing-twitter
+  ),
+  lnkd: (
+    bg: #006699,
+    fg: #fff,
+    icon: $m-sharing-linkedin
+  ),
+  wa: (
+    bg: #25d466,
+    fg: #fff,
+    icon: $m-sharing-whatsapp
+  )
+)!default;
+
+$m-sharing-sizes: (
+  std: 42px,
+  small: 28px,
+  big: 54px
+)!default;
+
+$m-sharing-std-size: 42px!default;
+$m-sharing-small-size: 28px!default;
+$m-sharing-big-size: 54px!default;
+
+$m-sharing-justify-content: center!default;
+
+.m-sharing {
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: $m-sharing-justify-content;
+  align-items: center;
+
+  @each $size, $value in $m-sharing-sizes {
+    @if $size == 'std' {
+      min-height: $value; // anti CLS
+
+      a {
+        width: $value;
+        height: $value;
+        margin:0 4px; // margin for desktop devices
+      }
+    } @else {
+
+      &.m-sharing-#{$size} {
+        min-height: $value;
+        a {
+          width: $value;
+          height: $value;
+        }
+      }
+    }
+  }
+
+  a:hover {
+    transform: scale(1.3);
+    transform-origin: center;
+    transition: transform .2s linear;
+  }
+
+  @media screen and (max-width: 768px) {
+    a {
+      margin:0 8px; // margin for small devices
+    }
+  }
+
+
+  // make anchors text invisible except for screenreaders (from bootstrap)
+  span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+
+}
+
+
+@each $item, $values in $m-sharing-items {
+  .m-sharing-#{$item} {
+    background-color: map-get($values, bg);
+
+    &::before {
+      content: svg-uri(
+        str-replace(
+          map-get($values, icon),
+          '<svg',
+          '<svg fill="#{map-get($values, fg)}"'
+        )
+      );
+    }
+  }
+}
+
