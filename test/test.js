@@ -3,8 +3,8 @@ import m_sharing from '../m-sharing.js';
 (() => {
   'use strict';
   m_sharing({
-    sharing: ['fb', 'twt', 'linkedin', 'wa'],
+    sharing: ['twt', 'fb', 'linkedin', 'wa'],
     size: 'std',
-    title_prefix: 'Share on'
+    title: 'Share on [[NAME]]'
   });
 })();

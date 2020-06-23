@@ -151,32 +151,6 @@
 		"oAP": "/build/node_modules",
 		"oF": 0
 		},
-	"/node_modules/m-utilities/scss-functions/_str_replace.scss": {
-		"aP": 1,
-		"bl": 1,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/node_modules/m-utilities/scss-functions/_str_replace.css",
-		"oF": 0,
-		"oS": 3,
-		"sct": 0
-		},
-	"/node_modules/m-utilities/scss-functions/_svg_uri.scss": {
-		"aP": 1,
-		"bl": 1,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "/node_modules/m-utilities/scss-functions/_svg_uri.css",
-		"oF": 0,
-		"oS": 3,
-		"sct": 0
-		},
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,

@@ -1,3 +1,6 @@
+//@import 'm-utilities/scss-functions/_str_replace.scss'; // called within svg_uri
+@import 'm-utilities/scss-functions/svg_uri';
+
 @import './imgs/icons';
 
 $m-sharing-items: (
@@ -25,18 +28,12 @@ $m-sharing-items: (
 
 $m-sharing-sizes: (
   std: 42px,
-  small: 28px,
-  big: 54px
+  small: 28px
 )!default;
-
-$m-sharing-std-size: 42px!default;
-$m-sharing-small-size: 28px!default;
-$m-sharing-big-size: 54px!default;
 
 $m-sharing-justify-content: center!default;
 
 .m-sharing {
-
 
   display: flex;
   flex-direction: row;
@@ -52,6 +49,7 @@ $m-sharing-justify-content: center!default;
         width: $value;
         height: $value;
         margin:0 4px; // margin for desktop devices
+        outline: none;
       }
     } @else {
 

@@ -10,6 +10,7 @@
   width: 42px;
   height: 42px;
   margin: 0 4px;
+  outline: none;
 }
 .m-sharing.m-sharing-small {
   min-height: 28px;

@@ -21,9 +21,8 @@
   },
   "homepage": "https://github.com/massimo-cassandro/m-sharing#readme",
   "dependencies": {
-
+    "m-utilities": "^1.16.5"
   },
   "devDependencies": {
-    "m-utilities": "^1.16.5"
   }
 }

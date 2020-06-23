@@ -27,7 +27,7 @@ export default function (options) {
     default_options = {
       sharing: [],
       size: 'std',
-      title_prefix: 'Condividi con'
+      title: 'Condividi con [[NAME]]'
     }
   ;
 
@@ -67,13 +67,15 @@ export default function (options) {
       }
 
       let url = sharing_data.url
-        .replace('[[URL]]', encodeURIComponent(location.href))
-        .replace('[[TITLE]]', encodeURIComponent(document.title));
+          .replace('[[URL]]', encodeURIComponent(location.href))
+          .replace('[[TITLE]]', encodeURIComponent(document.title)),
+
+        title = options.title.replace('[[NAME]]', sharing_data.name);
 
       el.insertAdjacentHTML('beforeend',
         `<a href="${url}" class="m-sharing-${sharing_data.class}"
-          title="${options.title_prefix} ${sharing_data.name}" role="button" tabindex="0">
-          <span>${options.title_prefix} ${sharing_data.name}</span>
+          title="${title}" role="button" tabindex="0">
+          <span>${title}</span>
         </a>`
       );
 
