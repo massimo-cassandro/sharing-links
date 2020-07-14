@@ -1,6 +1,6 @@
 # m-sharing
 
-**A quick and customizable links builder** 
+**A quick and customizable sharing links builder** 
 (Massimo Cassandro, 2020)
 
 Demo: <https://massimo-cassandro.github.io/m-sharing/test>
