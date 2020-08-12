@@ -213,4 +213,5 @@ $m-sharing-justify-content: center;
 ## Todo
 * slack
 * copy link
-* pinterest?
+* Telegram
+* mail
