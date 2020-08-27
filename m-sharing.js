@@ -28,7 +28,7 @@ export default function (options) {
       sharing: [],
       size: 'std',
       title: 'Condividi con [[NAME]]',
-      sharing_icon: true
+      share_icon: true
     }
   ;
 
@@ -42,7 +42,7 @@ export default function (options) {
     }
 
 
-    if( options.sharing_icon ) {
+    if( options.share_icon ) {
       sharing_container.insertAdjacentHTML('beforeend',
         '<span class="m-sharing-icon" aria-hidden="true"></span>'
       );

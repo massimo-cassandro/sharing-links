@@ -99,11 +99,14 @@ If you want to have multiple sets of buttons with different sizes on the same pa
 <div class="m-sharing" data-size="small"></div> 
 ```
 
+You can also add a classic *share icon* before all otner icons setting the `share_icon` parameter to true (default).
+
 Summing up:
 
 * if you doesn't define any size parameter the default one (std) will be used
 * if you define a `size` parameter while invoking the function, it will be used in all istances of `.m-sharing` elements
 * if there is a `data-size` attribute (and its value exists in the CSS) the concerned element (and only that) will be sized accordingly.
+* add a share icon setting the `share_icon` parameter to true (default)
 
 In addition, you can add custom sizes to your css, see the next section for details.
 
@@ -118,7 +121,8 @@ import m_sharing from 'path/to/m-sharing.js';
   m_sharing({
     sharing: ['twt', 'fb', 'linkedin', 'WA'],
     title: 'Share on [[NAME]]',
-    size: 'std'
+    size: 'std',
+    share_icon: true
   });
 })();
 ```
@@ -160,9 +164,16 @@ $m-sharing-items: (
     icon: $m-sharing-whatsapp
   )
 );
+
+$share_icon_fill: #666;
+
 ```
 
 You can change the background (`bg`) and foreground (`fg`) color of each button or set a different svg icon, and also completely remove unused items to reduce the size of your css.
+
+If the js `share_icon` parameter is enabled, you can set the share icon color using the` $share_icon_fill` variable. Set it to "false" if you don't need the share icon, to generate a smaller CSS.
+
+This variable has no effect if the js `share_icon` parameter is set to `false`.
 
 **$m-sharing-sizes**
 

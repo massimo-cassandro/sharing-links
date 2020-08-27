@@ -6,6 +6,6 @@ import m_sharing from '../m-sharing.js';
     sharing: ['twt', 'fb', 'linkedin', 'wa'],
     size: 'std',
     title: 'Share on [[NAME]]',
-    sharing_icon: true
+    share_icon: true
   });
 })();

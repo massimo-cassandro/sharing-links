@@ -27,7 +27,7 @@ $m-sharing-items: (
   )
 )!default;
 
-$sharing_icon_fill: #666; // set to false if you don't need it
+$share_icon_fill: #666!default; // set to false if you don't need it
 
 $m-sharing-sizes: (
   std: 42px,
@@ -79,7 +79,7 @@ $m-sharing-justify-content: center!default;
     }
   }
 
-  @if $sharing_icon_fill {
+  @if $share_icon_fill {
     .m-sharing-icon {
       background-color: transparent;
       &::before {
@@ -87,7 +87,7 @@ $m-sharing-justify-content: center!default;
           str-replace(
             $m-sharing-share,
             '<svg',
-            '<svg fill="#{$sharing_icon_fill}"'
+            '<svg fill="#{$share_icon_fill}"'
           )
         );
       }
