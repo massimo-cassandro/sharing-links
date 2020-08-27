@@ -190,7 +190,7 @@ $m-sharing-sizes: (
 
 **$m-sharing-justify-content**
 
-*m-sharing* use flexbox to display the buttons. They are centered by default, but you can change this setting thru the `$m-sharing-justify-content` variable.
+*m-sharing* uses flexbox to display the buttons. They are centered by default, but you can change this setting thru the `$m-sharing-justify-content` variable:
 
 ```scss
 $m-sharing-justify-content: center;
@@ -213,4 +213,5 @@ $m-sharing-justify-content: center;
 ## Todo
 * slack
 * copy link
-* pinterest?
+* Telegram
+* mail
