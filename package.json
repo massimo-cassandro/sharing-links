@@ -1,6 +1,6 @@
 {
   "name": "m-sharing",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Sharing links builder",
   "main": "m-sharing.js",
   "scripts": {
@@ -21,8 +21,13 @@
   },
   "homepage": "https://github.com/massimo-cassandro/m-sharing#readme",
   "dependencies": {
-    "m-utilities": "^1.16.5"
+    "m-utilities": "^1.18.10"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-inject-string": "^1.1.2",
+    "gulp-svgmin": "^3.0.0"
   }
 }

@@ -4,6 +4,7 @@
 @import './imgs/icons';
 
 $m-sharing-items: (
+
   fb: (
     bg: #39579a,
     fg: #fff,
@@ -26,6 +27,8 @@ $m-sharing-items: (
   )
 )!default;
 
+$sharing_icon_fill: #666; // set to false if you don't need it
+
 $m-sharing-sizes: (
   std: 42px,
   small: 28px
@@ -45,17 +48,18 @@ $m-sharing-justify-content: center!default;
     @if $size == 'std' {
       min-height: $value; // anti CLS
 
-      a {
+      a, .m-sharing-icon {
         width: $value;
         height: $value;
         margin:0 4px; // margin for desktop devices
         outline: none;
+        display: block;
       }
     } @else {
 
       &.m-sharing-#{$size} {
         min-height: $value;
-        a {
+        a, .m-sharing-icon {
           width: $value;
           height: $value;
         }
@@ -70,14 +74,28 @@ $m-sharing-justify-content: center!default;
   }
 
   @media screen and (max-width: 768px) {
-    a {
+    a, .m-sharing-icon {
       margin:0 8px; // margin for small devices
     }
   }
 
+  @if $sharing_icon_fill {
+    .m-sharing-icon {
+      background-color: transparent;
+      &::before {
+        content: svg-uri(
+          str-replace(
+            $m-sharing-share,
+            '<svg',
+            '<svg fill="#{$sharing_icon_fill}"'
+          )
+        );
+      }
+    }
+  }
 
   // make anchors text invisible except for screenreaders (from bootstrap)
-  span {
+  a > span {
     position: absolute;
     width: 1px;
     height: 1px;

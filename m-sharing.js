@@ -27,18 +27,27 @@ export default function (options) {
     default_options = {
       sharing: [],
       size: 'std',
-      title: 'Condividi con [[NAME]]'
+      title: 'Condividi con [[NAME]]',
+      sharing_icon: true
     }
   ;
 
   options = Object.assign({}, default_options, options);
 
-  document.querySelectorAll('.m-sharing').forEach(el => {
-    let size = (el.dataset.size? el.dataset.size : options.size).toLowerCase();
+  document.querySelectorAll('.m-sharing').forEach(sharing_container => {
+    let size = (sharing_container.dataset.size? sharing_container.dataset.size : options.size).toLowerCase();
 
     if(size !== 'std') {
-      el.classList.add(`m-sharing-${size}`);
+      sharing_container.classList.add(`m-sharing-${size}`);
     }
+
+
+    if( options.sharing_icon ) {
+      sharing_container.insertAdjacentHTML('beforeend',
+        '<span class="m-sharing-icon" aria-hidden="true"></span>'
+      );
+    }
+
 
     options.sharing.forEach( item => {
       let sharing_data;
@@ -72,14 +81,14 @@ export default function (options) {
 
         title = options.title.replace('[[NAME]]', sharing_data.name);
 
-      el.insertAdjacentHTML('beforeend',
+      sharing_container.insertAdjacentHTML('beforeend',
         `<a href="${url}" class="m-sharing-${sharing_data.class}"
           title="${title}" role="button" tabindex="0">
           <span>${title}</span>
         </a>`
       );
 
-      el.querySelectorAll('a').forEach(lnk => {
+      sharing_container.querySelectorAll('a').forEach(lnk => {
         lnk.addEventListener('click', function(e) {
           e.preventDefault();
           let w =450,

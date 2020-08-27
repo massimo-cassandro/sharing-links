@@ -6,30 +6,31 @@
   align-items: center;
   min-height: 42px;
 }
-.m-sharing a {
+.m-sharing a, .m-sharing .m-sharing-icon {
   width: 42px;
   height: 42px;
   margin: 0 4px;
   outline: none;
+  display: block;
 }
 .m-sharing.m-sharing-small {
   min-height: 28px;
 }
-.m-sharing.m-sharing-small a {
+.m-sharing.m-sharing-small a, .m-sharing.m-sharing-small .m-sharing-icon {
   width: 28px;
   height: 28px;
 }
 .m-sharing.m-sharing-big {
   min-height: 54px;
 }
-.m-sharing.m-sharing-big a {
+.m-sharing.m-sharing-big a, .m-sharing.m-sharing-big .m-sharing-icon {
   width: 54px;
   height: 54px;
 }
 .m-sharing.m-sharing-xl {
   min-height: 4rem;
 }
-.m-sharing.m-sharing-xl a {
+.m-sharing.m-sharing-xl a, .m-sharing.m-sharing-xl .m-sharing-icon {
   width: 4rem;
   height: 4rem;
 }
@@ -39,11 +40,17 @@
   transition: transform 0.2s linear;
 }
 @media screen and (max-width: 768px) {
-  .m-sharing a {
+  .m-sharing a, .m-sharing .m-sharing-icon {
     margin: 0 8px;
   }
 }
-.m-sharing span {
+.m-sharing .m-sharing-icon {
+  background-color: transparent;
+}
+.m-sharing .m-sharing-icon::before {
+  content: url("data:image/svg+xml;charset=utf8,%3Csvg fill='%23666' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M32 29.787a3.868 3.868 0 00-2.62 1.026l-9.5-5.54c.073-.3.12-.613.12-.933 0-.32-.047-.633-.12-.933l9.4-5.487A3.97 3.97 0 0032 19c2.207 0 4-1.793 4-4s-1.793-4-4-4-4 1.793-4 4c0 .32.047.633.12.933l-9.4 5.487A3.97 3.97 0 0016 20.34c-2.207 0-4 1.793-4 4s1.793 4 4 4a3.97 3.97 0 002.72-1.08l9.5 5.54c-.067.28-.107.573-.107.873A3.887 3.887 0 1032 29.787z'/%3E%3C/svg%3E");
+}
+.m-sharing a > span {
   position: absolute;
   width: 1px;
   height: 1px;
