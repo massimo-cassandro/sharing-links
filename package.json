@@ -1,6 +1,6 @@
 {
   "name": "m-sharing",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Sharing links builder",
   "main": "m-sharing.js",
   "scripts": {
@@ -29,5 +29,10 @@
     "gulp-flatmap": "^1.0.2",
     "gulp-inject-string": "^1.1.2",
     "gulp-svgmin": "^3.0.0"
-  }
+  },
+  "files": [
+    "./imgs/_icons.scss",
+    "_m-sharing.scss",
+    "m-sharing.js"
+  ]
 }
