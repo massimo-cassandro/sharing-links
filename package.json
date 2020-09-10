@@ -1,14 +1,17 @@
 {
-  "name": "m-sharing",
+  "name": "@massimo-cassandro/sharing-links",
   "version": "1.1.2",
   "description": "Sharing links builder",
-  "main": "m-sharing.js",
+  "main": "sharing-links.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/massimo-cassandro/m-sharing.git"
+    "url": "git+https://github.com/massimo-cassandro/sharing-links.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "social",
@@ -17,9 +20,9 @@
   "author": "Massimo Cassandro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/massimo-cassandro/m-sharing/issues"
+    "url": "https://github.com/massimo-cassandro/sharing-links/issues"
   },
-  "homepage": "https://github.com/massimo-cassandro/m-sharing#readme",
+  "homepage": "https://github.com/massimo-cassandro/sharing-links#readme",
   "dependencies": {
     "m-utilities": "^1.18.10"
   },
@@ -32,7 +35,7 @@
   },
   "files": [
     "imgs/_icons.scss",
-    "_m-sharing.scss",
-    "m-sharing.js"
+    "_sharing-links.scss",
+    "sharing-links.js"
   ]
 }

@@ -33,15 +33,7 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"/.npmignore": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.npmignore",
-		"oF": 0
-		},
-	"/_m-sharing.scss": {
+	"/_sharing-links.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -49,7 +41,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/_m-sharing.css",
+		"oAP": "/_sharing-links.css",
 		"oF": 0,
 		"oS": 1,
 		"sct": 0
@@ -144,25 +136,6 @@
 		"oAP": "/LICENSE",
 		"oF": 0
 		},
-	"/m-sharing.code-workspace": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/m-sharing.code-workspace",
-		"oF": 0
-		},
-	"/m-sharing.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/m-sharing-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/node_modules": {
 		"ft": 65536,
 		"oA": 2,
@@ -184,6 +157,44 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/sharing-links.code-workspace": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/sharing-links.code-workspace",
+		"oF": 0
+		},
+	"/sharing-links.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/sharing-links-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/test/index.html": {
 		"cB": 0,
@@ -253,7 +264,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 614368338.99355304,
-	"displayValue": "m-sharing",
+	"displayValue": "sharing-links",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_magenta",
 	"iconImageWasSetByUser": 0

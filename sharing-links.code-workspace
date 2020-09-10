@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+    "preview-in-browser.domain": "http://sharing-links.local:8888/",
+		"preview-in-browser.removeStartString": "~/Sites/sharing-links/"
+	}
+}

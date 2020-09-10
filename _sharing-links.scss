@@ -3,52 +3,52 @@
 
 @import './imgs/icons';
 
-$m-sharing-items: (
+$sharing-links-items: (
 
   fb: (
     bg: #39579a,
     fg: #fff,
-    icon: $m-sharing-facebook
+    icon: $sharing-links-facebook
   ),
   twt: (
     bg: #1da1f2,
     fg: #fff,
-    icon: $m-sharing-twitter
+    icon: $sharing-links-twitter
   ),
   lnkd: (
     bg: #006699,
     fg: #fff,
-    icon: $m-sharing-linkedin
+    icon: $sharing-links-linkedin
   ),
   wa: (
     bg: #25d466,
     fg: #fff,
-    icon: $m-sharing-whatsapp
+    icon: $sharing-links-whatsapp
   )
 )!default;
 
 $share_icon_fill: #666!default; // set to false if you don't need it
 
-$m-sharing-sizes: (
+$sharing-links-sizes: (
   std: 42px,
   small: 28px
 )!default;
 
-$m-sharing-justify-content: center!default;
+$sharing-links-justify-content: center!default;
 
-.m-sharing {
+.sharing-links {
 
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: $m-sharing-justify-content;
+  justify-content: $sharing-links-justify-content;
   align-items: center;
 
-  @each $size, $value in $m-sharing-sizes {
+  @each $size, $value in $sharing-links-sizes {
     @if $size == 'std' {
       min-height: $value; // anti CLS
 
-      a, .m-sharing-icon {
+      a, .sharing-links-icon {
         width: $value;
         height: $value;
         margin:0 4px; // margin for desktop devices
@@ -57,9 +57,9 @@ $m-sharing-justify-content: center!default;
       }
     } @else {
 
-      &.m-sharing-#{$size} {
+      &.sharing-links-#{$size} {
         min-height: $value;
-        a, .m-sharing-icon {
+        a, .sharing-links-icon {
           width: $value;
           height: $value;
         }
@@ -74,18 +74,18 @@ $m-sharing-justify-content: center!default;
   }
 
   @media screen and (max-width: 768px) {
-    a, .m-sharing-icon {
+    a, .sharing-links-icon {
       margin:0 8px; // margin for small devices
     }
   }
 
   @if $share_icon_fill {
-    .m-sharing-icon {
+    .sharing-links-icon {
       background-color: transparent;
       &::before {
         content: svg-uri(
           str-replace(
-            $m-sharing-share,
+            $sharing-links-share,
             '<svg',
             '<svg fill="#{$share_icon_fill}"'
           )
@@ -111,8 +111,8 @@ $m-sharing-justify-content: center!default;
 }
 
 
-@each $item, $values in $m-sharing-items {
-  .m-sharing-#{$item} {
+@each $item, $values in $sharing-links-items {
+  .sharing-links-#{$item} {
     background-color: map-get($values, bg);
 
     &::before {

@@ -34,17 +34,17 @@ export default function (options) {
 
   options = Object.assign({}, default_options, options);
 
-  document.querySelectorAll('.m-sharing').forEach(sharing_container => {
+  document.querySelectorAll('.sharing-links').forEach(sharing_container => {
     let size = (sharing_container.dataset.size? sharing_container.dataset.size : options.size).toLowerCase();
 
     if(size !== 'std') {
-      sharing_container.classList.add(`m-sharing-${size}`);
+      sharing_container.classList.add(`sharing-links-${size}`);
     }
 
 
     if( options.share_icon ) {
       sharing_container.insertAdjacentHTML('beforeend',
-        '<span class="m-sharing-icon" aria-hidden="true"></span>'
+        '<span class="sharing-links-icon" aria-hidden="true"></span>'
       );
     }
 
@@ -82,7 +82,7 @@ export default function (options) {
         title = options.title.replace('[[NAME]]', sharing_data.name);
 
       sharing_container.insertAdjacentHTML('beforeend',
-        `<a href="${url}" class="m-sharing-${sharing_data.class}"
+        `<a href="${url}" class="sharing-links-${sharing_data.class}"
           title="${title}" role="button" tabindex="0">
           <span>${title}</span>
         </a>`
@@ -95,7 +95,7 @@ export default function (options) {
             h=500,
             t = window.top.outerHeight / 2 + window.top.screenY - ( h / 2),
             l = window.top.outerWidth / 2 + window.top.screenX - ( w / 2);
-          window.open(this.href, 'm-sharing',
+          window.open(this.href, 'sharing-links',
             `width=${w},height=${h},top=${t},left=${l}` +
             ',menubar=no,location=yes,resizable=yes,scrollbars=yes,status=no'
           );

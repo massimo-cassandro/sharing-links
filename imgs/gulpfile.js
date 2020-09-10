@@ -45,7 +45,7 @@ gulp.task('default', function () {
             //,js2svg: { pretty: true }
           };
         })) // end svgmin
-        .pipe(inject.wrap('$m-sharing-' + icon_name + ': \'', '\';'));
+        .pipe(inject.wrap('$sharing-links-' + icon_name + ': \'', '\';'));
 
     })) // end flatmap
     .pipe(concat( '_icons.scss' ))

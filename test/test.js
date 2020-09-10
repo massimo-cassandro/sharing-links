@@ -1,8 +1,8 @@
-import m_sharing from '../m-sharing.js';
+import sharing_links from '../sharing-links.js';
 
 (() => {
   'use strict';
-  m_sharing({
+  sharing_links({
     sharing: ['twt', 'fb', 'linkedin', 'wa'],
     size: 'std',
     title: 'Share on [[NAME]]',
