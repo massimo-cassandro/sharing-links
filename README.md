@@ -14,7 +14,7 @@ The sum of css and js sizes is about 6.5 - 7 kb, and **less than 3 kb** if gzipp
 You can add *sharing-links* to your project using npm:
 
 ```shell
-npm i --save sharing-links
+npm i --save @massimo-cassandro/sharing-links
 ```
 
 As a dependency package, my [m-utilities](https://github.com/massimo-cassandro/m-utilities) will be installed too.
