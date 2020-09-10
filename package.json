@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/sharing-links",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Sharing links builder",
   "main": "sharing-links.js",
   "scripts": {
