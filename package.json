@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/massimo-cassandro/sharing-links#readme",
   "dependencies": {
-    "m-utilities": "^1.18.10"
+    "m-utilities": "^1.18.13"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
