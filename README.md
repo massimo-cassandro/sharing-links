@@ -226,3 +226,4 @@ $sharing-links-justify-content: center;
 * copy link
 * Telegram
 * mail
+* LinkedIn has updated its API, here you can see more details: <https://stackoverflow.com/questions/33426752/linkedin-share-post-url/61583095#61583095>
