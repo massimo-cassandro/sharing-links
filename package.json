@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/sharing-links",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Sharing links builder",
   "main": "sharing-links.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/massimo-cassandro/sharing-links#readme",
   "dependencies": {
-    "m-utilities": "^1.18.13"
+    "@massimo-cassandro/m-utilities": "^1.22.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
