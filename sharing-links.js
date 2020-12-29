@@ -22,13 +22,24 @@ export default function (options) {
         url: 'https://api.whatsapp.com/send?text=[[URL]]',
         class: 'wa',
         name: 'Whatsapp'
+      },
+      skype   : {
+        url: 'https://web.skype.com/share?url=[[URL]]&text=[[TITLE]]',
+        class: 'skype',
+        name: 'Skype'
+      },
+      teams   : {
+        url: 'https://teams.microsoft.com/share?href=[[URL]]&preview=[[PREVIEW]]&msgText=[[TITLE]]',
+        class: 'teams',
+        name: 'Teams'
       }
     },
     default_options = {
       sharing: [],
       size: 'std',
       title: 'Condividi con [[NAME]]',
-      share_icon: true
+      share_icon: true,
+      preview: true
     }
   ;
 
@@ -72,6 +83,14 @@ export default function (options) {
         case 'wa':
         case 'whatsapp':
           sharing_data = sharing_items.wa;
+          break;
+
+        case 'skype':
+          sharing_data = sharing_items.skype;
+          break;
+
+        case 'teams':
+          sharing_data = sharing_items.teams;
           break;
       }
 

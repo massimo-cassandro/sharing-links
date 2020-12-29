@@ -119,13 +119,16 @@ import sharing_links from 'path/to/sharing-links.js';
 (() => {
   'use strict';
   sharing_links({
-    sharing: ['twt', 'fb', 'linkedin', 'WA'],
+    sharing: ['twt', 'fb', 'linkedin', 'WA', 'skype', 'teams'],
     title: 'Share on [[NAME]]',
+    preview: true,
     size: 'std',
     share_icon: true
   });
 })();
 ```
+
+* `preview` (where supported, MS teams only) allows you to specify if url preview must be displayed (default true)
 
 ### SCSS setup
 
@@ -212,6 +215,7 @@ $sharing-links-justify-content: center;
 
 * <https://ogp.me/>
 * <https://metatags.io/>
+* <https://github.com/bradvin/social-share-urls>
 * <https://developers.facebook.com/docs/workplace/sharing/share-dialog>
 * <https://www.linkedin.com/post-inspector/inspect/>
 * <https://cards-dev.twitter.com/validator>

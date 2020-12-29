@@ -24,6 +24,16 @@ $sharing-links-items: (
     bg: #25d466,
     fg: #fff,
     icon: $sharing-links-whatsapp
+  ),
+  skype: (
+    bg: #00aff0,
+    fg: #fff,
+    icon: $sharing-links-skype
+  ),
+  teams: (
+    bg: #464eb8,
+    fg: #fff,
+    icon: $sharing-links-teams
   )
 )!default;
 
