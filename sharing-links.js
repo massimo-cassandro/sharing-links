@@ -2,6 +2,7 @@ export default function (options) {
   'use strict';
 
   // sharing urls from https://gist.github.com/apisandipas/74d396c7853b93f5f861091a2135d527
+  // https://github.com/bradvin/social-share-urls
   const sharing_items = {
       fb   : {
         url: 'https://www.facebook.com/sharer.php?u=[[URL]]',
@@ -39,7 +40,8 @@ export default function (options) {
       size: 'std',
       title: 'Condividi con [[NAME]]',
       share_icon: true,
-      preview: true
+      preview: true,
+      remove_url_parameters: []
     }
   ;
 
@@ -94,9 +96,22 @@ export default function (options) {
           break;
       }
 
+      let shared_url = location.href;
+
+      if(options.remove_url_parameters.length) {
+        let url_obj = new URL(shared_url);
+
+        options.remove_url_parameters.forEach(p => {
+          url_obj.searchParams.delete(p);
+        });
+
+        shared_url = url_obj.toString();
+      }
+
       let url = sharing_data.url
-          .replace('[[URL]]', encodeURIComponent(location.href))
-          .replace('[[TITLE]]', encodeURIComponent(document.title)),
+          .replace('[[URL]]', encodeURIComponent(shared_url))
+          .replace('[[TITLE]]', encodeURIComponent(document.title))
+          .replace('[[PREVIEW]]', options.preview? 'true' : 'false'),
 
         title = options.title.replace('[[NAME]]', sharing_data.name);
 

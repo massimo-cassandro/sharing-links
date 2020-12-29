@@ -123,12 +123,17 @@ import sharing_links from 'path/to/sharing-links.js';
     title: 'Share on [[NAME]]',
     preview: true,
     size: 'std',
-    share_icon: true
+    share_icon: true,
+    remove_url_parameters: []
   });
 })();
 ```
 
+where
+
 * `preview` (where supported, MS teams only) allows you to specify if url preview must be displayed (default true)
+* `remove_url_parameters`: array of query string keys to be removed from page url (removes values too, default: empty array)
+* `share_icon`: see below
 
 ### SCSS setup
 
