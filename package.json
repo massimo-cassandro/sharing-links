@@ -28,11 +28,14 @@
     "@massimo-cassandro/m-utilities": "^1.22.0"
   },
   "devDependencies": {
+    "eslint": "^7.28.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-flatmap": "^1.0.2",
     "gulp-inject-string": "^1.1.2",
-    "gulp-svgmin": "^3.0.0"
+    "gulp-svgmin": "^3.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-twbs-bootstrap": "^2.2.0"
   },
   "files": [
     "imgs/_icons.scss",
