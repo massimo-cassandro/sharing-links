@@ -97,6 +97,9 @@ If you want to have multiple sets of buttons with different sizes on the same pa
 
 <!-- force to use the 'small' size -->
 <div class="sharing-links" data-size="small"></div> 
+
+<!-- specific url -->
+<div class="sharing-links" data-url="https://example.com"></div> 
 ```
 
 You can also add a classic *share icon* before all otner icons setting the `share_icon` parameter to true (default).
@@ -106,6 +109,7 @@ Summing up:
 * if you doesn't define any size parameter the default one (std) will be used
 * if you define a `size` parameter while invoking the function, it will be used in all istances of `.sharing-links` elements
 * if there is a `data-size` attribute (and its value exists in the CSS) the concerned element (and only that) will be sized accordingly.
+* if there is a `data-url` attribute, its value is used for sharing.
 * add a share icon setting the `share_icon` parameter to true (default)
 
 In addition, you can add custom sizes to your css, see the next section for details.
@@ -214,6 +218,25 @@ $sharing-links-sizes: (
 ```scss
 $sharing-links-justify-content: center;
 ```
+
+## On-demand activation
+By default, *sharing-links* is applied to all `.sharing-links` elements, but you can render all icon buttons on-demand using the `create_sharing_links` function:
+
+```javascript
+import {create_sharing_links} from 'path/to/sharing-links.js'
+
+const options = {
+  sharing: ['twt', 'fb', 'linkedin', 'WA', 'skype', 'teams'],
+  title: 'Share on [[NAME]]',
+  preview: true,
+  size: 'std',
+  share_icon: true,
+  remove_url_parameters: []
+};
+create_sharing_links(document.getElementById('my-container'), options);
+```
+
+The `options` parameter can be omitted (default parameters will be used);
 
 
 ## Tools and references
