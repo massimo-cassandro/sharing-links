@@ -40,6 +40,7 @@ const sharing_container_class = 'sharing-links',
     title: 'Condividi con [[NAME]]',
     share_icon: true,
     preview: true,
+    url: null,
     remove_url_parameters: []
   };
 
@@ -100,6 +101,9 @@ export function create_sharing_links (container, options = {}) {
     }
 
     let shared_url = location.href;
+    if(options.url !== null) {
+      shared_url = options.url;
+    }
     if(container.dataset.url !== undefined) {
       shared_url = container.dataset.url;
     }

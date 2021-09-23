@@ -109,7 +109,7 @@ Summing up:
 * if you doesn't define any size parameter the default one (std) will be used
 * if you define a `size` parameter while invoking the function, it will be used in all istances of `.sharing-links` elements
 * if there is a `data-size` attribute (and its value exists in the CSS) the concerned element (and only that) will be sized accordingly.
-* if there is a `data-url` attribute, its value is used for sharing.
+* if there is a `data-url` attribute, its value is used for sharing. Urls can be specified within the options object too (NB: if both are present, dataset value prevails)
 * add a share icon setting the `share_icon` parameter to true (default)
 
 In addition, you can add custom sizes to your css, see the next section for details.
@@ -128,6 +128,7 @@ import sharing_links from 'path/to/sharing-links.js';
     preview: true,
     size: 'std',
     share_icon: true,
+    url: 'http://someurl.com',  // <== if present is used for sharing (default null)
     remove_url_parameters: []
   });
 })();
