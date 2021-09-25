@@ -26,7 +26,7 @@ First, you need to add the required [Open Graph](https://ogp.me/) tags to your p
 
 Then, to activate *sharing-links* you have to:
 
-* add an `.sharing-links` element in the position you would like the sharing buttons to be displayed:
+* add a `.sharing-links` element in the position you would like the sharing buttons to be displayed:
 
 ```html
 <div class="sharing-links"></div>
