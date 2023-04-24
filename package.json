@@ -34,8 +34,8 @@
     "gulp-flatmap": "^1.0.2",
     "gulp-inject-string": "^1.1.2",
     "gulp-svgmin": "^4.1.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-twbs-bootstrap": "^2.2.0"
+    "stylelint": "^15.6.0",
+    "stylelint-config-twbs-bootstrap": "^9.0.1"
   },
   "files": [
     "imgs/_icons.scss",
