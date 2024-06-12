@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^7.28.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-flatmap": "^1.0.2",
     "gulp-inject-string": "^1.1.2",
